@@ -35,6 +35,14 @@ group :development do
   gem 'pry-theme'
 end
 
+group :test, :development do
+  gem "rspec-rails"
+end
+
+group :test do
+  gem "capybara"
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
