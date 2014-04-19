@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :concerts
+
   root 'users#index'
 
   get 'signup', to: 'users#new', as: :signup
