@@ -1,0 +1,19 @@
+<%= form_for(@concert) do |f| %>
+  <%= render "shared/errors", object: @concert %>
+  <p>
+    <%= f.label :venue %><br />
+    <%= f.text_field :venue, autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_field :date %>
+  </p>
+  <p>
+    <%= f.submit %> |
+    <%= link_to "Cancel", concerts_path %>
+  </p>
+<% end %>

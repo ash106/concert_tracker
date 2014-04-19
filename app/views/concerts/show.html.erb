@@ -1,0 +1,8 @@
+<h1>Viewing <%= @concert.date %></h1>
+
+<p><%= @concert.venue %> | <%= @concert.location %></p>
+
+<p>
+  <%= link_to 'Edit', edit_concert_path(@concert) %> | 
+  <%= link_to 'Delete', @concert, method: :delete, data: { confirm: "Are you sure?" } %>
+</p>
