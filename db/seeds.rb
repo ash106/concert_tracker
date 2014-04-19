@@ -26,3 +26,31 @@ User.create!([
     password_confirmation: "hello"
   }
 ])
+
+Concert.create!([
+  {
+    venue: "The Masquerade",
+    location: "Atlanta, GA",
+    date: "2008-04-26"
+  },
+  {
+    venue: "Boulder Theatre",
+    location: "Boulder, CO",
+    date: "2006-03-31"
+  },
+  {
+    venue: "The Door",
+    location: "Dallas, TX",
+    date: "2006-08-10"
+  },
+  {
+    venue: "The Starland Ballroom",
+    location: "Sayreville, NJ",
+    date: "2006-12-27"
+  },
+  {
+    venue: "House of Blues",
+    location: "New Orleans, LA",
+    date: "2009-07-18"
+  }
+])
