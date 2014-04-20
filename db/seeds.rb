@@ -54,3 +54,21 @@ Concert.create!([
     date: "2009-07-18"
   }
 ])
+
+Band.create!([
+  {
+    name: "Thrice"
+  },
+  {
+    name: "Circa Survive"
+  },
+  {
+    name: "Envy On The Coast"
+  },
+  {
+    name: "Rx Bandits"
+  },
+  {
+    name: "Saosin"
+  }
+])
