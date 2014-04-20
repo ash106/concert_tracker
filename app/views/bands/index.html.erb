@@ -1,0 +1,9 @@
+<h1><%= pluralize(@bands.size, "Band") %></h1>
+
+<% @bands.each do |band| %>
+  <p><%= link_to band.name, band %></p>
+<% end %>
+
+<p>
+  <%= link_to "Add New Band", new_band_path %>
+</p>
