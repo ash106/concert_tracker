@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :acts
+
   resources :attendees
 
   resources :bands
