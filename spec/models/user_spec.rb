@@ -93,4 +93,16 @@ describe "A user" do
     expect(user.password_digest).to be_present
   end
 
+  it "has attended concerts" do
+    user = User.new(user_attributes)
+    concert1 = Concert.new(concert_attributes(date: "2007-04-13"))
+    concert2 = Concert.new(concert_attributes(date: "2008-05-02"))
+
+    user.attendees.new(concert: concert1)
+    user.attendees.new(concert: concert2)
+
+    expect(user.attended_concerts).to include(concert1)
+    expect(user.attended_concerts).to include(concert2)
+  end
+
 end

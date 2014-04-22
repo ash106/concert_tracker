@@ -49,6 +49,18 @@ describe "A concert" do
     expect(concert.valid?).to be_true
   end
 
+  it "has audience members" do
+    concert = Concert.new(concert_attributes)
+    user1 = User.new(user_attributes(name: "Alex"))
+    user2 = User.new(user_attributes(name: "Greg"))
+
+    concert.attendees.new(user: user1)
+    concert.attendees.new(user: user2)
+
+    expect(concert.audience_members).to include(user1)
+    expect(concert.audience_members).to include(user2)
+  end
+
   # it "has many bands" do
   #   concert = Concert.new(concert_attributes)
 

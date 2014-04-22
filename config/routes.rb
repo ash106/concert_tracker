@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :attendees
+
   resources :bands
 
   resources :concerts
