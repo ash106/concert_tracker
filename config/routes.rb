@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :concerts
 
-  root 'users#index'
+  root 'concerts#index'
 
   get 'signup', to: 'users#new', as: :signup
   resources :users
