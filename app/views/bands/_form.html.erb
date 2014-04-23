@@ -5,6 +5,7 @@
     <%= f.text_field :name, autofocus: true %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success" %>
+    <%= link_to 'Cancel', bands_path, class: "btn btn-danger", role: "button" %>
   </p>
 <% end %>

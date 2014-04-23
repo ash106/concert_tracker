@@ -1,26 +1,27 @@
 <%= form_for(@user) do |f| %>
   <%= render "shared/errors", object: @user %>
-  <li>
-    <%= f.label :name %>
+  <p>
+    <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true %>
-  </li>
-  <li>
-    <%= f.label :email %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
     <%= f.email_field :email %>
-  </li>
-  <li>
-    <%= f.label :password %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
     <%= f.password_field :password %>
-  </li>
-  <li>
-    <%= f.label :password_confirmation, "Confirm Password" %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
     <%= f.password_field :password_confirmation %>
-  </li>
+  </p>
   <p>
     <% if @user.new_record? %>
-      <%= f.submit "Create Account" %>
+      <%= f.submit "Create Account", class: "btn btn-success" %>
     <% else %>
-      <%= f.submit "Update Account" %>
+      <%= f.submit "Update Account", class: "btn btn-success" %>
     <% end %>
+    <%= link_to 'Cancel', users_path, class: "btn btn-danger", role: "button" %>
   </p>
 <% end %>

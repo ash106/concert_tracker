@@ -1,6 +1,6 @@
 <h1>Profile for <%= @band.name %></h1>
 
 <p>
-  <%= link_to 'Edit', edit_band_path(@band) %> | 
-  <%= link_to 'Delete', @band, method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to 'Edit', edit_band_path(@band), class: "btn btn-default", role: "button" %>
+  <%= link_to 'Delete', @band, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger", role: "button" %>
 </p>

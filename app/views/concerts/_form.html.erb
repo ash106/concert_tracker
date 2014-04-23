@@ -13,7 +13,7 @@
     <%= f.date_field :date %>
   </p>
   <p>
-    <%= f.submit %> |
-    <%= link_to "Cancel", concerts_path %>
+    <%= f.submit class: "btn btn-success" %>
+    <%= link_to "Cancel", concerts_path, class: "btn btn-danger", role: "button" %>
   </p>
 <% end %>

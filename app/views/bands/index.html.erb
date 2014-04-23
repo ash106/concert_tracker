@@ -1,9 +1,9 @@
 <h1><%= pluralize(@bands.size, "Band") %></h1>
 
 <% @bands.each do |band| %>
-  <p><%= link_to band.name, band %></p>
+  <h2><%= link_to band.name, band %></h2>
 <% end %>
 
 <p>
-  <%= link_to "Add New Band", new_band_path %>
+  <%= link_to "Add New Band", new_band_path, class: "btn btn-primary", role: "button" %>
 </p>

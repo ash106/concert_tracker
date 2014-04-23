@@ -3,6 +3,6 @@
 <p><%= @concert.venue %> | <%= @concert.location %></p>
 
 <p>
-  <%= link_to 'Edit', edit_concert_path(@concert) %> | 
-  <%= link_to 'Delete', @concert, method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to 'Edit', edit_concert_path(@concert), class: "btn btn-default", role: "button" %>
+  <%= link_to 'Delete', @concert, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger", role: "button" %>
 </p>
