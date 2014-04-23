@@ -45,6 +45,8 @@ end
 
 gem 'rails_12factor', group: :production
 
+gem 'bootstrap-sass'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
