@@ -113,15 +113,19 @@ Band.create!([
 ])
 
 alex = User.find_by(name: "Alex")
+craig = User.find_by(name: "Craig")
+jon = User.find_by(name: "Jon")
 
 concert = Concert.find_by(date: "2008-04-26")
 concert.attendees.create!(user: alex)
+concert.attendees.create!(user: craig)
 concert.acts.create!(band: Band.find_by(name: "Pelican"))
 concert.acts.create!(band: Band.find_by(name: "Circa Survive"))
 concert.acts.create!(band: Band.find_by(name: "Thrice"))
 
 concert = Concert.find_by(date: "2006-03-31")
 concert.attendees.create!(user: alex)
+concert.attendees.create!(user: craig)
 concert.acts.create!(band: Band.find_by(name: "Facing New York"))
 concert.acts.create!(band: Band.find_by(name: "Emanuel"))
 concert.acts.create!(band: Band.find_by(name: "Taking Back Sunday"))
@@ -143,6 +147,8 @@ concert.acts.create!(band: Band.find_by(name: "Thursday"))
 
 concert = Concert.find_by(date: "2009-07-18")
 concert.attendees.create!(user: alex)
+concert.attendees.create!(user: craig)
+concert.attendees.create!(user: jon)
 concert.acts.create!(band: Band.find_by(name: "Zechs Marquise"))
 concert.acts.create!(band: Band.find_by(name: "Dredg"))
 concert.acts.create!(band: Band.find_by(name: "Rx Bandits"))
