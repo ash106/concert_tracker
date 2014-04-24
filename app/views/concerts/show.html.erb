@@ -4,7 +4,10 @@
   <p><%= link_to band.name, band %></p>
 <% end %>
 
-<p><%= @concert.venue %> | <%= @concert.location %></p>
+<p>
+  <%= @concert.venue %> | <%= @concert.location %>
+  <%= users_attended(@concert) %>
+</p>
 
 <p>
   <%= link_to 'Edit', edit_concert_path(@concert), class: "btn btn-default", role: "button" %>

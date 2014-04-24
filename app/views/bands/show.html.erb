@@ -1,5 +1,13 @@
 <h1>Profile for <%= @band.name %></h1>
 
+<h3>Shows Played:</h3>
+<% @concerts_played.each do |concert| %>
+  <p>
+    <%= link_to concert.date, concert %> 
+    <%= users_attended(concert) %>
+  </p>
+<% end %>
+
 <p>
   <%= link_to 'Edit', edit_band_path(@band), class: "btn btn-default", role: "button" %>
   <%= link_to 'Delete', @band, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger", role: "button" %>
