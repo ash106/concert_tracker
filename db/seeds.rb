@@ -57,18 +57,94 @@ Concert.create!([
 
 Band.create!([
   {
-    name: "Thrice"
+    name: "Pelican"
   },
   {
     name: "Circa Survive"
   },
   {
+    name: "Thrice"
+  },
+  {
+    name: "Facing New York"
+  },
+  {
+    name: "Emanuel"
+  },
+  {
+    name: "Taking Back Sunday"
+  },
+  {
+    name: "The Outline"
+  },
+  {
     name: "Envy On The Coast"
   },
   {
-    name: "Rx Bandits"
+    name: "Your Enemies Friends"
+  },
+  {
+    name: "Forgive Durden"
   },
   {
     name: "Saosin"
+  },
+  {
+    name: "New London Fire"
+  },
+  {
+    name: "From Autumn To Ashes"
+  },
+  {
+    name: "Lifetime"
+  },
+  {
+    name: "Thursday"
+  },
+  {
+    name: "Zechs Marquise"
+  },
+  {
+    name: "Dredg"
+  },
+  {
+    name: "Rx Bandits"
   }
 ])
+
+alex = User.find_by(name: "Alex")
+
+concert = Concert.find_by(date: "2008-04-26")
+concert.attendees.create!(user: alex)
+concert.acts.create!(band: Band.find_by(name: "Pelican"))
+concert.acts.create!(band: Band.find_by(name: "Circa Survive"))
+concert.acts.create!(band: Band.find_by(name: "Thrice"))
+
+concert = Concert.find_by(date: "2006-03-31")
+concert.attendees.create!(user: alex)
+concert.acts.create!(band: Band.find_by(name: "Facing New York"))
+concert.acts.create!(band: Band.find_by(name: "Emanuel"))
+concert.acts.create!(band: Band.find_by(name: "Taking Back Sunday"))
+
+concert = Concert.find_by(date: "2006-08-10")
+concert.attendees.create!(user: alex)
+concert.acts.create!(band: Band.find_by(name: "The Outline"))
+concert.acts.create!(band: Band.find_by(name: "Envy On The Coast"))
+concert.acts.create!(band: Band.find_by(name: "Your Enemies Friends"))
+concert.acts.create!(band: Band.find_by(name: "Forgive Durden"))
+concert.acts.create!(band: Band.find_by(name: "Saosin"))
+
+concert = Concert.find_by(date: "2006-12-27")
+concert.attendees.create!(user: alex)
+concert.acts.create!(band: Band.find_by(name: "New London Fire"))
+concert.acts.create!(band: Band.find_by(name: "From Autumn To Ashes"))
+concert.acts.create!(band: Band.find_by(name: "Lifetime"))
+concert.acts.create!(band: Band.find_by(name: "Thursday"))
+
+concert = Concert.find_by(date: "2009-07-18")
+concert.attendees.create!(user: alex)
+concert.acts.create!(band: Band.find_by(name: "Zechs Marquise"))
+concert.acts.create!(band: Band.find_by(name: "Dredg"))
+concert.acts.create!(band: Band.find_by(name: "Rx Bandits"))
+
+
