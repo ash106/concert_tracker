@@ -6,6 +6,7 @@ class ConcertsController < ApplicationController
 
   def show
     @concert = Concert.find(params[:id])
+    @bands = @concert.bands
   end
 
   def new

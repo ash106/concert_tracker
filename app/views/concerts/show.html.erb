@@ -1,5 +1,9 @@
 <h1>Viewing <%= @concert.date %></h1>
 
+<% @bands.each do |band| %>
+  <p><%= link_to band.name, band %></p>
+<% end %>
+
 <p><%= @concert.venue %> | <%= @concert.location %></p>
 
 <p>

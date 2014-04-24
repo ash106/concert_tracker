@@ -2,6 +2,7 @@
 
 <% @concerts.each do |concert| %>
   <h2><%= link_to concert.date, concert %></h2>
+  <p><%= format_bands_list(concert) %></p>
   <p><%= concert.venue %> | <%= concert.location %></p>
 <% end %>
 
