@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Creating a new user" do
 
   it "saves the user and shows the user's profile page" do
-    visit users_url
+    visit root_url
 
     click_link 'Sign Up'
 
