@@ -101,8 +101,8 @@ describe "A user" do
     user.attendees.new(concert: concert1)
     user.attendees.new(concert: concert2)
 
-    expect(user.attended_concerts).to include(concert1)
-    expect(user.attended_concerts).to include(concert2)
+    expect(user.concerts_attended).to include(concert1)
+    expect(user.concerts_attended).to include(concert2)
   end
 
 end

@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :attendees, dependent: :destroy
-  has_many :attended_concerts, through: :attendees, source: :concert
+  has_many :concerts_attended, through: :attendees, source: :concert
 
   validates :name, presence: true
   validates :email, presence: true,

@@ -23,8 +23,8 @@ describe "A band" do
     band.acts.new(concert: concert1)
     band.acts.new(concert: concert2)
 
-    expect(band.played_concerts).to include(concert1)
-    expect(band.played_concerts).to include(concert2)
+    expect(band.concerts_played).to include(concert1)
+    expect(band.concerts_played).to include(concert2)
   end
 
 end
