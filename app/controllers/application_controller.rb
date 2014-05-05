@@ -7,6 +7,7 @@ private
 
   def require_signin
     unless current_user
+      session[:intended_url] = request.url
       redirect_to signin_url, alert: "Please sign in first!"
     end
   end
@@ -16,5 +17,11 @@ private
   end
 
   helper_method :current_user
+
+  def current_user?(user)
+    current_user == user
+  end
+
+  helper_method :current_user?
 
 end

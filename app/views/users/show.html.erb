@@ -7,7 +7,9 @@
   <p><%= link_to concert.date, concert %> (<%= format_bands_list(concert) %>)</p>
 <% end %>
 
-<p>
-  <%= link_to "Edit Account", edit_user_path(@user), class: "btn btn-primary", role: "button" %>
-  <%= link_to "Delete Account", @user, method: :delete, data: { confirm: "Are you sure you want to permanently delete your account?" }, class: "btn btn-danger", role: "button" %>
-</p>
+<% if current_user?(@user) %>
+  <p>
+    <%= link_to "Edit Account", edit_user_path(@user), class: "btn btn-primary", role: "button" %>
+    <%= link_to "Delete Account", @user, method: :delete, data: { confirm: "Are you sure you want to permanently delete your account?" }, class: "btn btn-danger", role: "button" %>
+  </p>
+<% end %>
