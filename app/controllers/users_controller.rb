@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to @user, notice: "Thanks for signing up!"
+      redirect_to @user, flash: { success: "Thanks for signing up!" }
     else
       render :new
     end
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: "Account successfully updated!"
+      redirect_to @user, flash: { success: "Account successfully updated!" }
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     session[:user_id] = nil
-    redirect_to root_url, alert: "Account successfully deleted!"
+    redirect_to root_url, flash: { success: "Account successfully deleted!" }
   end
 
 private

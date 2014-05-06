@@ -16,7 +16,7 @@ class BandsController < ApplicationController
   def create
     @band = Band.new(band_params)
     if @band.save
-      redirect_to @band, notice: "Band successfully created!"
+      redirect_to @band, flash: { success: "Band successfully created!" }
     else
       render :new
     end
@@ -29,7 +29,7 @@ class BandsController < ApplicationController
   def update
     @band = Band.find(params[:id])
     if @band.update(band_params)
-      redirect_to @band, notice: "Band successfully updated!"
+      redirect_to @band, flash: { success: "Band successfully updated!" }
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class BandsController < ApplicationController
   def destroy
     @band = Band.find(params[:id])
     @band.destroy
-    redirect_to bands_url, notice: "Band successfully deleted!"
+    redirect_to bands_url, flash: { success: "Band successfully deleted!" }
   end
 
 private

@@ -16,7 +16,7 @@ class ConcertsController < ApplicationController
   def create
     @concert = Concert.new(concert_params)
     if @concert.save
-      redirect_to @concert, notice: "Concert successfully created!"
+      redirect_to @concert, flash: { success: "Concert successfully created!" }
     else
       render :new
     end
@@ -29,7 +29,7 @@ class ConcertsController < ApplicationController
   def update
     @concert = Concert.find(params[:id])
     if @concert.update(concert_params)
-      redirect_to @concert, notice: "Concert successfully updated!"
+      redirect_to @concert, flash: { success: "Concert successfully updated!" }
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class ConcertsController < ApplicationController
   def destroy
     @concert = Concert.find(params[:id])
     @concert.destroy
-    redirect_to concerts_url, notice: "Concert successfully deleted!"
+    redirect_to concerts_url, flash: { success: "Concert successfully deleted!" }
   end
 
 private
